@@ -1,0 +1,1 @@
+start erl -sname server2
