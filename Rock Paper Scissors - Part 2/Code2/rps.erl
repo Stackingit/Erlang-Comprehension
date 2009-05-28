@@ -8,7 +8,7 @@ attack( Attack ) ->
         true ->
             Random = random:uniform( length( validAttacks() ) ),
             SelectedAttack = lists:nth( Random, validAttacks() ),
-            getWinner( {computer,SelectedAttack}, {player,Attack} )
+            getWinner( {someLameExperiment,4,"hello"},{computer,SelectedAttack, player,Attack} )
     end.
 
 getWinner( ComputerAttack, PlayerAttack ) ->

@@ -11,6 +11,8 @@ attack( Attack ) ->
             getWinner( {computer,SelectedAttack}, {player,Attack} )
     end.
 
+getWinner( {computer,Attack}, {player,Attack} ) ->
+    { result, tie, {{computer,Attack},{player,Attack}} };
 getWinner( ComputerAttack, PlayerAttack ) ->
     { ComputerAttack, PlayerAttack }.
 
