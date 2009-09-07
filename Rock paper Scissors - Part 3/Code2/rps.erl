@@ -1,14 +1,13 @@
 -module(rps).
--export( [ start/0, attack/1 ] ).
+-export( [ start/0, attack/1  ] ).
 
 start()->
-    Pid = spawn( fun()-> loop() end ),
-    register( rpsServer, Pid ).
-    
+    register(rpsServer, spawn( fun()-> loop() end ) ).
+ 
 loop()->
     receive
-        { Attack } ->
-            io:format( "~p~n", [ attack( Attack ) ] ),
+        { From, Attack } ->
+            From ! attack( Attack ),
             loop()
     end.
 
