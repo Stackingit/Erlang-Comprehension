@@ -1,1 +1,0 @@
-start erl -sname client
