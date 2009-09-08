@@ -6,7 +6,7 @@ attack( Attack ) ->
   receive
     { result, Result, Detail }->
       io:format("~p : ~p",[ Result, Detail ] );
-     {error, Error } ->
+     Error ->
         Error
   end.
   
