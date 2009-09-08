@@ -7,7 +7,7 @@ attack( Attack ) ->
     { result, Result, Detail }->
       io:format("~p : ~p",[ Result, Detail ] );
      {error, Error } ->
-        Error;
-      Unknown ->
-        { dunno, Unknown }
+        Error
   end.
+  
+  
